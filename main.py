@@ -23,13 +23,14 @@ def main():
         if success:
             keyboard.put_position(x, y)
 
-        keyboard.draw()
+        keyboard.update_and_draw()
         
         # Exit when pressing 'q'
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
     eye.shutdown()
+    keyboard.shutdown()
 
 
 if __name__ == '__main__':
